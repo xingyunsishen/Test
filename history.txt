@@ -1,0 +1,518 @@
+    1  20180308-151120:df -h 
+    2  20180308-151120:getenforce 
+    3  20180308-151120:vim /etc/selinux/
+    4  20180308-151120:vim /etc/selinux/config 
+    5  20180308-151120:systemctl firewalled status
+    6  20180308-151120:systemctl status firewalled 
+    7  20180308-151120:systemctl status iptables
+    8  20180308-151120:ifconfig 
+    9  20180308-151120:ping www.baidu.com 
+   10  20180308-151120:cd /etc/yum.repos.d/
+   11  20180308-151120:ls
+   12  20180308-151120:vim CentOS-Media.repo 
+   13  20180308-151120:mkdir /mnt/cdrom
+   14  20180308-151120:ls /mnt/
+   15  20180308-151120:mount /dev/sr0  /mnt/cdrom/
+   16  20180308-151120:df -h 
+   17  20180308-151120:hostname
+   18  20180308-151120:vim /etc/hostname 
+   19  20180308-151120:vim /etc/fstab 
+   20  20180308-151120:ifconfig  | grep inet
+   21  20180308-151120:vim /etc/sysconfig/network-scripts/ifcfg-ens33 
+   22  20180308-151120:init  0
+   23  20180308-151120:init  0 
+   24  20180308-151120:cd 
+   25  20180308-151120:ls
+   26  20180308-151120:cd /
+   27  20180308-151120:ls
+   28  20180308-151120:cd home/
+   29  20180308-151120:ks
+   30  20180308-151120:ls
+   31  20180308-151120:cd xueji/
+   32  20180308-151120:ls
+   33  20180308-151120:cd Downloads/
+   34  20180308-151120:ls
+   35  20180308-151120:vim /etc/sysconfig/network-scripts/ifcfg-ens33 
+   36  20180308-151120:setup
+   37  20180308-151120:vim /etc/sysconfig/network-scripts/ifcfg-ens33 
+   38  20180308-151120:ifconfig 
+   39  20180308-151120:vim /etc/sysconfig/network-scripts/ifcfg-ens33 
+   40  20180308-151120:systemctl restart network 
+   41  20180308-151120:systemctl status network 
+   42  20180308-151120:vim /etc/sysconfig/network-scripts/ifcfg-ens33 
+   43  20180308-151120:systemctl restart network 
+   44  20180308-151120:systemctl status network 
+   45  20180308-151120:systemctl status network > a.txt 
+   46  20180308-151120:less a.txt 
+   47  20180308-151120:systemctl restart network 
+   48  20180308-151120:rm -rf /etc/udev/rules.d/70-persistent-ipoib.rules 
+   49  20180308-151120:init  0 
+   50  20180308-151120:cd /home/xueji/Downloads/
+   51  20180308-151120:ls
+   52  20180308-151120:wget http://yum.puppetlabs.com/el/7/products/x86_64/puppetlabs-release-7-10.noarch.rpm
+   53  20180308-151120:rpm -ivh puppetlabs-release-7-10.noarch.rpm 
+   54  20180308-151120:ls /etc/yum.repos.d/
+   55  20180308-151120:cd /etc/yum.repos.d/
+   56  20180308-151120:ls
+   57  20180308-151120:yum clean all 
+   58  20180308-151120:yum update 
+   59  20180308-151120:yum install -y puppet-server
+   60  20180308-151120:chkconfig --list | grep puppet 
+   61  20180308-151120:systemctl enable puppet 
+   62  20180308-151120:systemctl start puppetmaster 
+   63  20180308-151120:systemctl status puppetmaster 
+   64  20180308-151120:puppet cert list --all 
+   65  20180308-151120:puppet cert --sign master.xueji.cn
+   66  20180308-151120:vim /etc/hosts
+   67  20180308-151120:vim /etc/hostname 
+   68  20180308-151120:date
+   69  20180308-151120:yum install -y ntp 
+   70  20180308-151120:systemctl start ntp 
+   71  20180308-151120:systemctl start ntpd
+   72  20180308-151120:systemctl enable ntp 
+   73  20180308-151120:systemctl enable ntpd
+   74  20180308-151120:ntpdate pool.ntp.org
+   75  20180308-151120:systemctl start ntpd 
+   76  20180308-151120:ntpdate pool.ntp.org
+   77  20180308-151120:systemctl stop ntpd 
+   78  20180308-151120:ntpdate pool.ntp.org
+   79  20180308-151120:history 
+   80  20180308-151120:puppet cert list --all 
+   81  20180308-151120:cd
+   82  20180308-151120:vim /etc/puppet/manifests/site.pp
+   83  20180308-151120:vim /etc/vimrc 
+   84  20180308-151120:source /etc/vimrc
+   85  20180308-151120:vim /etc/puppet/manifests/site.pp
+   86  20180308-151120:puppet cert sign --all 
+   87  20180308-151120:echo $?
+   88  20180308-151120:puppet cert clean --all 
+   89  20180308-151120:puppet cert sign --all 
+   90  20180308-151120:reboot 
+   91  20180308-151120:hostname
+   92  20180308-151120:vim /etc/hosts
+   93  20180308-151120:ifconfig  
+   94  20180308-151120:ifconfig   | grep inet 
+   95  20180308-151120:ping www.baidu.com 
+   96  20180308-151120:getenforce  
+   97  20180308-151120:systemctl firewalld statu s
+   98  20180308-151120:systemctl firewalld status
+   99  20180308-151120:systemctl status firewalld
+  100  20180308-151120:systemctl stop firewalld 
+  101  20180308-151120:systemctl disable firewalld 
+  102  20180308-151120:hostname
+  103  20180308-151120:systemctl status puppet-server
+  104  20180308-151120:systemctl status puppetmaster
+  105  20180308-151120:systemctl start puppetmaster 
+  106  20180308-151120:systemctl status puppetmaster
+  107  20180308-151120:systemctl enable puppetmaster
+  108  20180308-151120:puppet cert list --all 
+  109  20180308-151120:puppet cert sign --all 
+  110  20180308-151120:puppet cert list --all 
+  111  20180308-151120:puppet cert clean --all
+  112  20180308-151120:puppet cert list --all 
+  113  20180308-151120:puppet cert sign --all 
+  114  20180308-151120:systemctl restart puppetmaster 
+  115  20180308-151120:systemctl status  puppetmaster 
+  116  20180308-151120:puppet cert sign --all 
+  117  20180308-151120:echo $?
+  118  20180308-151120:puppet cert list --all
+  119  20180308-151120:ls /etc/puppet/manifests/site.pp 
+  120  20180308-151120:systemctl install ypserv
+  121  20180308-151120:systemctl stop puppetmaster 
+  122  20180308-151120:yum install -y ypsrv
+  123  20180308-151120:yum install -y ypserv
+  124  20180308-151120:mkdir /home/NISHOME
+  125  20180308-151120:useradd -d /home/NISHOME/nisuser01 nisuser01
+  126  20180308-151120:useradd -d /home/NISHOME/nisuser02 nisuser02
+  127  20180308-151120:userdel -d /home/NISHOME/nisuser02 nisuser02
+  128  20180308-151120:userdel nisuser02
+  129  20180308-151120:ls /home/NISHOME/
+  130  20180308-151120:rm -rf /home/NISHOME/nisuser02/
+  131  20180308-151120:useradd -d /home/NISHOME/nisuser02 -s /sbin/nologin nisuser02
+  132  20180308-151120:man userdel
+  133  20180308-151120:ls /home/
+  134  20180308-151120:userdel -r nisuser02
+  135  20180308-151120:ls /home/NISHOME/
+  136  20180308-151120:useradd -d /home/NISHOME/nisuser02 -s /sbin/nologin nisuser02
+  137  20180308-151120:echo nisuser01:123456 | chpasswd
+  138  20180308-151120:echo nisuser02:123456 | chpasswd
+  139  20180308-151120:nisdomainname 
+  140  20180308-151120:vim /etc/sysconfig/network
+  141  20180308-151120:nisdomainname master.xueji.cn
+  142  20180308-151120:nisdomainname 
+  143  20180308-151120:cp /etc/ypserv.conf /etc/ypserv.conf.bak
+  144  20180308-151120:vim /etc/ypserv.conf
+  145  20180308-151120:systemctl restart ypserv
+  146  20180308-151120:systemctl status ypserv
+  147  20180308-151120:systemctl start rpcbind
+  148  20180308-151120:systemctl status rpcbind 
+  149  20180308-151120:df -h
+  150  20180308-151120:rpm -qpl /mnt/cdrom/Packages/ypserv-2.31-8.el7.x86_64.rpm 
+  151  20180308-151120:rpm -qpl /mnt/cdrom/Packages/ypserv-2.31-8.el7.x86_64.rpm | grep ypinit
+  152  20180308-151120:/usr/lib64/yp/ypinit -m 
+  153  20180308-151120:ll /var/yp/
+  154  20180308-151120:systemctl restart ypserv
+  155  20180308-151120:/etc/init.d/yppasswd restart
+  156  20180308-151120:systemctl status yppasswdd 
+  157  20180308-151120:systemctl start yppasswdd 
+  158  20180308-151120:systemctl status yppasswdd 
+  159  20180308-151120:systemctl enable ypserv 
+  160  20180308-151120:systemctl enable yppasswdd 
+  161  20180308-151120:ssh nisuser01@192.168.111.131
+  162  20180308-151120:su - nisuser01
+  163  20180308-151120:cd /home/NISHOME/
+  164  20180308-151120:ls
+  165  20180308-151120:nisdomainname 
+  166  20180308-151120:vim /etc/ypserv.conf
+  167  20180308-151120:vim /etc/sysconfig/network
+  168  20180308-151120:nisdomainname 
+  169  20180308-151120:vim /etc/ypserv.conf
+  170  20180308-151120:systemctl restart ypserv
+  171  20180308-151120:/usr/lib64/yp/ypinit -m 
+  172  20180308-151120:systemctl restart ypserv
+  173  20180308-151120:init  0 
+  174  20180308-151120:ls
+  175  20180308-151120:init  0 
+  176  20180308-151120:systemctl status mariadb-server
+  177  20180308-151120:vim employee.txt
+  178  20180308-151120:cat employee.txt 
+  179  20180308-151120:sed n employee.txt 
+  180  20180308-151120:vim employee.txt 
+  181  20180308-151120:sed n employee.txt 
+  182  20180308-151120:cp employee.txt employee.txt.bak
+  183  20180308-151120:sed 's/JUNK/&/p' employee.txt
+  184  20180308-151120:man sed 
+  185  20180308-151120:sed 's/JUNK/&/p' employee.txt
+  186  20180308-151120:sed -n 'p' employee.txt
+  187  20180308-151120:sed n employee.txt
+  188  20180308-151120:sed -n 'p' employee.txt
+  189  20180308-151120:sed -n 'q' employee.txt
+  190  20180308-151120:sed -n ' \' employee.txt
+  191  20180308-151120:sed -n '' employee.txt
+  192  20180308-151120:sed -n 'a' employee.txt
+  193  20180308-151120:sed -n 'b' employee.txt
+  194  20180308-151120:sed -n 'c' employee.txt
+  195  20180308-151120:sed -n 's/a/,/p' employee.txt
+  196  20180308-151120:sed n employee.txt
+  197  20180308-151120:sed 's/a/v/p' employee.txt
+  198  20180308-151120:sed 's/a/b/p' employee.txt
+  199  20180308-151120:sed 's/a/!/p' employee.txt
+  200  20180308-151120:sed n employee.txt
+  201  20180308-151120:sed 's/ABC/$/p' employee.txt
+  202  20180308-151120:grep Jane employee.txt
+  203  20180308-151120:sed -n 's/Jane/$/p' employee.txt
+  204  20180308-151120:sed -n 's/Jane/&/p' employee.txt
+  205  20180308-151120:sed -n '/Jane/ p' employee.txt
+  206  20180308-151120:grep Jane employee.txt
+  207  20180308-151120:sed -n '/Jane/ p' employee.txt
+  208  20180308-151120:history | more 
+  209  20180308-151120:vim /etc/bashrc 
+  210  20180308-151120:man PS1
+  211  20180308-151120:man PS 
+  212  20180308-151120:echo $PS1
+  213  20180308-151120:vim .bashrc 
+  214  20180308-151120:whereis PS1
+  215  20180308-151120:which PS1
+  216  20180308-151120:echo $PS1
+  217  20180308-151120:PS1=[\u@\h \t\W\#]\$
+  218  20180308-151120:PS1='[\u@\h \t\W\#]\$'
+  219  20180308-151120:PS1='[\u@\h-\t-\W \#]\$'
+  220  20180308-151120:PS1='[\u@\h-\t\W \#]\$'
+  221  20180308-151120:vim .bashrc 
+  222  20180308-151120:source .bashrc 
+  223  20180307-153259:exit
+  224  20180308-151120:man sed
+  225  20180307-145630:sed -n employee.txt
+  226  20180307-145712:sed -n 'p' employee.txt
+  227  20180307-145722:sed n employee.txt
+  228  20180307-145730:sed -N employee.txt
+  229  20180307-145803:grep -v employee.txt
+  230  20180307-145808:ls
+  231  20180307-145816:ps -aux 
+  232  20180307-145826:top
+  233  20180307-150150:ps -Aux | pgrep process_name | wc -l 
+  234  20180307-150156:ps -aux | pgrep process_name | wc -l 
+  235  20180307-150231:ps -aux | wc -l 
+  236  20180307-150325:sed -n 'p' employee.txt
+  237  20180307-150333:sed 'N' employee.txt
+  238  20180307-150341:sed 'n' employee.txt
+  239  20180307-150408:grep Jane employee.txt
+  240  20180307-150420:sed '/Jane/ p'
+  241  20180307-150431:sed '/Jane/ p' employee.txt
+  242  20180307-150443:sed -n '/Jane/ p' employee.txt
+  243  20180307-150517:sed -n 's/Jane/&/p ' employee.txt
+  244  20180307-150546:cp /etc/passwd .
+  245  20180307-150552:head passwd 
+  246  20180307-150606:head -n 10 passwd 
+  247  20180307-150626:sed '11,$ d' passwd 
+  248  20180307-150639:sed -n '1,10' pasd
+  249  20180307-150641:sed -n '1,10' passwd 
+  250  20180307-150650:sed -n '1,10 p' passwd 
+  251  20180307-150704:sed '10 q' passwd 
+  252  20180307-150759:man sed 
+  253  20180307-150842:sed -V
+  254  20180307-150940:sed --help
+  255  20180307-151104:man sed 
+  256  20180307-151248:sed '1,10 p' employee.txt
+  257  20180307-151307:sed -n '1,10 p' employee.txt
+  258  20180307-151322:sed -n '1,1 p' employee.txt
+  259  20180307-151328:sed -n '1,5 p' employee.txt
+  260  20180307-151333:sed -n '1,6 p' employee.txt
+  261  20180307-151341:sed -n '1,7 p' employee.txt
+  262  20180307-151514:sed '1,2 p' employee.txt
+  263  20180307-151601:sed '1,9 p' employee.txt
+  264  20180307-151638:sed -n 'p' employee.txt
+  265  20180307-151655:sed --silent 'p' employee.txt
+  266  20180307-151706:sed --quiet 'p' employee.txt
+  267  20180307-151826:sed -n -e '/root/p' passwd 
+  268  20180307-151856:sed -n '/root/ p ' passwd  
+  269  20180307-151930:sed -i 's/John/Johnny/' employee.txt
+  270  20180307-151943:sed -n employee.txt
+  271  20180307-151953:sed -n 'p' employee.txt
+  272  20180307-152217:sed sed -i 's/John/Johnnyn/' employee.txt
+  273  20180307-152239:sed sed -i 's/Johnnyn/John/' employee.txt
+  274  20180307-152316:sed -i 's/Johnnyn/John/' employee.txt
+  275  20180307-152322:sed -n 'p' employee.txt
+  276  20180307-152355:sed -ibak 's/John/Johnny/' employee.txt
+  277  20180307-152356:ls
+  278  20180307-152409:ll employee.txt*
+  279  20180307-152444:sed -i.bak 's/101/1001/' employee.txt
+  280  20180307-152448:ll employee.txt*
+  281  20180307-152504:sed -n 'p' employee.txt
+  282  20180307-152531:sed -i 's/1001/101/' employee.txt
+  283  20180307-152539:sed -n 'p' employee.txt
+  284  20180307-152606:sed -n 'p' employee.txt.bak 
+  285  20180307-152705:sed -i 's/Johnnyy/Johnny' employee.txt.bak 
+  286  20180307-152745:sed -i 's/Johnnyy/Johnny/' employee.txt.bak 
+  287  20180307-152800:sed -n 'p' employee.txt.bak 
+  288  20180307-152855:ll employee.txt
+  289  20180307-152902:su - xueji 
+  290  20180307-153123:groups xueji 
+  291  20180307-153245:usermod -a -G root xueji
+  292  20180307-153251:groups xueji
+  293  20180307-153256:su - root 
+  294  20180307-153303:su - xueji 
+  295  20180307-153429:ll employee.txt
+  296  20180307-153456:chmod g=rw employee.txt
+  297  20180307-153501:ll employee.txt
+  298  20180307-153514:su - xueji 
+  299  20180307-153540:ll employee.txt
+  300  20180307-153617:cp employee.txt /home/xueji/employee01.txt
+  301  20180307-153622:su - xueji 
+  302  20180307-153659:cp -a employee.txt /home/xueji/employee0a.txt 
+  303  20180307-153703:su - xueji 
+  304  20180307-154056:sed -i_bak 's/Johnny/John/' employee.txt
+  305  20180307-154100:ll employee.txt
+  306  20180307-154108:ll employee*
+  307  20180307-154115:su - xueji 
+  308  20180307-155009:sed n employee.txt
+  309  20180307-155019:sed -n n employee.txt
+  310  20180307-155059:vim empname.txt
+  311  20180307-155229:cp empname.txt empname.txt.bak
+  312  20180307-155318:sed -n -e '{x;n}' -e '/Manager/{x;p}/' empname.txt
+  313  20180307-155337:sed -n -e '{x;n}' -e'/Manager/{x;p}/' empname.txt
+  314  20180307-155402:sed -n -e'{x;n}' -e'/Manager/{x;p}' empname.txt
+  315  20180307-155437:vim .bash_history 
+  316  20180307-155759:mkdir script
+  317  20180307-155811:mv script/ sed_script
+  318  20180307-155815:cd sed_script/
+  319  20180307-155827:vim x.sed
+  320  20180307-155918:chmod u+x x.sed 
+  321  20180307-155932:./x.sed ../empname.txt
+  322  20180307-160540:sed -n -e '/Manager/!h' -e '/Manager/{x;p}' ../empname.txt
+  323  20180307-160549:vim h.sed
+  324  20180307-160643:chmod u+x h.sed 
+  325  20180307-160657:./h.sed ../empname.txt
+  326  20180307-160707:vim h.sed
+  327  20180307-160744:./h.sed ../empname.txt
+  328  20180307-160749:chmod u+x h.sed 
+  329  20180307-160752:vim h.sed
+  330  20180307-160856:./h.sed ../empname.txt
+  331  20180307-160905:vim h.sed
+  332  20180307-161310:vim x.sed 
+  333  20180307-161342:./h.sed ../empname.txt
+  334  20180307-161437:sed -n -e '/Manager/!h' -e '/Manager/{x;p}' ../empname.txt
+  335  20180307-161450:vim x.sed 
+  336  20180307-161459:vim h.sed 
+  337  20180307-161537:./h.sed ../empname.txt
+  338  20180307-161542:vim h.sed 
+  339  20180307-161905:./h.sed ../empname.txt
+  340  20180307-161952:vim label.sed
+  341  20180307-162129:chmod U+x label.sed 
+  342  20180307-162134:chmod u+x label.sed 
+  343  20180307-162153:./label.sed ../empname.txt
+  344  20180307-162316:vim label01.sed 
+  345  20180307-162514:chmod +x label01.sed 
+  346  20180307-162524:./label01.sed ../empname.txt
+  347  20180307-162528:chmod +x label01.sed 
+  348  20180307-162530:vim label01.sed 
+  349  20180307-162538:./label01.sed ../empname.txt
+  350  20180307-162635:sed 'N;s/\n/:/;/Manager/s/^/\*/' ../empname.txt
+  351  20180307-162837:vim label01.sed 
+  352  20180307-162859:./label01.sed ../empname.txt
+  353  20180307-162902:vim label01.sed 
+  354  20180307-163012:./label01.sed ../empname.txt
+  355  20180307-163020:vim label01.sed 
+  356  20180307-163150:./label01.sed ../empname.txt
+  357  20180307-163241:vim items-sold.txt
+  358  20180307-163551:sed 'N;s/\n/:/;/Manager/s/^/\***/' ../empname.txt
+  359  20180307-163649:awk -F: '/mail/ {print $1}' ../passwd 
+  360  20180307-163700:cd
+  361  20180307-163924:awk -F ',' '{print $2,$3}' employee.txt
+  362  20180307-164009:awk 'BEGIN{ FS=',' \'
+  363  20180307-164012:awk 'BEGIN{ FS=',' \
+  364  20180308-151120:print "-------------\nNmae\tTitle\n------------"}\
+  365  20180308-151120:{print $2,"\t",$3}\
+  366  20180308-151120:END{print"----------------------------------------"}'employee.txt
+  367  20180307-164236:awk 'BEGIN{ FS="," \
+  368  20180308-151120:print "-------------\nNmae\tTitle\n------------"}\
+  369  20180308-151120:{print $2,"\t",$3}\
+  370  20180308-151120:END{print"----------------------------------------"}'employee.txt
+  371  20180307-164300:awk 'BEGIN{ FS="," ;\
+  372  20180308-151120:print "-------------\nNmae\tTitle\n------------"}\
+  373  20180308-151120:{print $2,"\t",$3}\
+  374  20180308-151120:END{print"----------------------------------------"}'employee.txt
+  375  20180307-164336:awk 'BEGIN{ FS="," ;\
+  376  20180308-151120:print "-------------\nNmae\tTitle\n------------"}\
+  377  20180308-151120:{print $2,"\t",$3;}\
+  378  20180308-151120:END{print"----------------------------------------"}'employee.txt
+  379  20180307-164422:awk 'BEGIN{ FS="," ;\
+  380  20180308-151120:print "-------------\nNmae\tTitle\n------------"}\
+  381  20180308-151120:{print $2,"\t",$3;}\
+  382  20180308-151120:END {print"----------------------------------------"}'employee.txt
+  383  20180307-164428:awk 'BEGIN{ FS="," ;\
+  384  20180308-151120:print "-------------\nNmae\tTitle\n------------"}\
+  385  20180308-151120:{print $2,"\t",$3;}\
+  386  20180308-151120:END {print"----------------------------------------"}' employee.txt
+  387  20180307-165220:systemctl status mariadb
+  388  20180307-165241:systemctl start mariadb
+  389  20180307-165250:systemctl status mariadb 
+  390  20180307-165255:mysql 
+  391  20180307-165327:systemctl stop mariadb 
+  392  20180307-165725:ini 0 
+  393  20180307-165751:ls
+  394  20180307-165755:init  0
+  395  20180308-151120:ifconfig | grep inet 
+  396  20180308-152207:;s
+  397  20180308-152210:lsa
+  398  20180308-152211:ls
+  399  20180308-155015:sed -n 'p' emp
+  400  20180308-155018:sed -n 'p' employee.txt
+  401  20180308-155446:cp employee.txt awk-employee.txt
+  402  20180308-155450:vim awk-employee.txt 
+  403  20180308-155812:awk 'BEGIN {FS="[,:%]"}{print $2,$3}' awk-employee.txt 
+  404  20180308-155952:awk -F ',' '{print $2,$3}' employee.txt
+  405  20180308-160011:awk -F ',' '{print $2,":",$3}' employee.txt
+  406  20180308-160112:ifconfig | awk -F '{print $1,$2}' 
+  407  20180308-160206:cp employee.txt item.txt
+  408  20180308-160209:vim item.txt 
+  409  20180308-160532:awk -F ',' 'BEGIN {OFS=":"} {print $2,$3}' employee.txt
+  410  20180308-160616:awk 'BEGIN {print "test1","test2"}'
+  411  20180308-160745:awk 'BEGIN {print "t2" "t1"}'
+  412  20180308-160952:cp employee.txt one-lin-employee.txt
+  413  20180308-160956:vim one-lin-employee.txt 
+  414  20180308-161318:awk -F,'{print $2}' one-lin-employee.txt 
+  415  20180308-161341:awk -F '{print $2}' one-lin-employee.txt 
+  416  20180308-161348:awk -F, '{print $2}' one-lin-employee.txt 
+  417  20180308-161515:awk -F, 'BEGIN { RS=":"} { print $2}' one-lin-employee.txt 
+  418  20180308-161805:vim .bash_history 
+  419  20180308-161824:history 
+  420  20180308-161855:vim .bash_history 
+  421  20180308-161930:vun ofs-employee.txt
+  422  20180308-161951:cp employee.txt ofs-employee.txt
+  423  20180308-161955:vim ofs-employee.txt 
+  424  20180308-162237:awk 'begin{rs="-\n";fs="\n";ofs=":"}{print $2,$3}' ofs-employee.txt 
+  425  20180308-162408:awk 'BEGIN{RS="-\n";FS="\n";OFS=":"}{print $2,$3}' ofs-employee.txt 
+  426  20180308-162620:awk 'BEGIN {FS=",";ORS"\n---\n"}"{print $2,$3}' employee.txt
+  427  20180308-162639:awk 'BEGIN {FS=",";ORS"\n---\n"}{print $2,$3}' employee.txt
+  428  20180308-162942:vim D-upper.sed
+  429  20180308-163108:chmod +x D-upper.sed 
+  430  20180308-163128:./D-upper.sed employee.txt
+  431  20180308-163136:ls
+  432  20180308-163322:awk 'BEGIN {FS=",";OFS="\n";ORS="\n---\n"}{print $1,$2,$3}' employee.txt
+  433  20180308-163431:awk 'BEGIN {FS=","} \
+{print "Emp Id of record number",NR,"is",$1;}\
+{print $2,$3} employee.txt
+  434  20180308-163743:awk 'BEGIN {FS=","} \
+{print "Emp Id of record number",NR,"is",$1;}\
+{print $2,$3}' employee.txt
+  435  20180308-163856:awk '{print FILENAME}'employee.txt awk-employee.txt 
+  436  20180308-163952:awk '{print FILENAME }' employee.txt awk-employee.txt 
+  437  20180308-164058:awk '{print "Last name:",$2;\
+print "Filename:",FILENAME}'
+  438  20180308-164154:awk '{print "Last name:",$2;\
+print "Filename:",FILENAME}' employee.txt
+  439  20180308-164243:echo "Johe Doe" | awk '{print "Last name:",$2;}'print "Filename:",FILENAME}' 
+  440  20180308-164519:awk 'BEGIN {FS=","}\
+{print "Total number of records:",NR}'employee.txt awk-employee.txt 
+  441  20180308-164558:awk 'BEGIN {FS=","}\
+{print "Total number of records:",NR}' employee.txt awk-employee.txt 
+  442  20180308-164640:awk 'BEGIN {FS=","}\
+END {print "Total number of records:",NR}' employee.txt awk-employee.txt 
+  443  20180308-164753:awk 'BEGIN {FS=","}\
+END {print FILENAME "Total number of records:",NR}' employee.txt awk-employee.txt 
+  444  20180308-164943:awk 'BEGIN {FS=","}\
+{print FILENAME ": record number",NR,"is",$1;} \{print "Total number of records:",NR} employee.txt awk-employee.txt 
+  445  20180308-165008:awk 'BEGIN {FS=","}\
+{print FILENAME ": record number",NR,"is",$1;} END {print "Total number of records:",NR} employee.txt awk-employee.txt 
+  446  20180308-165016:awk 'BEGIN {FS=","}\
+{print FILENAME ": record number",NR,"is",$1;} END {print "Total number of records:",NR}‘ employee.txt awk-employee.txt 
+  447  20180308-165204:awk 'BEGIN {FS=","}\
+{print FILENAME ": record number",NR,"is",$1;} END {print "Total number of records:",NR}' employee.txt awk-employee.txt 
+  448  20180308-165225:awk 'BEGIN {FS=","}\
+{print FILENAME ":record number", FNR ,"is" , $1;} \
+END {print "Total number of records:" , NR} 'employee.txt awk-employee.txt 
+  449  20180308-165418:awk 'BEGIN {FS=","}\
+{print FILENAME ":record number", FNR ,"is" , $1;} \
+END {print "Total number of records:" , NR}' employee.txt awk-employee.txt 
+  450  20180308-165512:vim fnr.awk
+  451  20180308-165833:awk -f fnr.awk employee.txt awk-employee.txt 
+  452  20180308-165846:vim fnr.awk
+  453  20180308-165949:awk -f fnr.awk employee.txt awk-employee.txt 
+  454  20180308-165955:vim fnr.awk
+  455  20180308-170023:awk -f fnr.awk employee.txt awk-employee.txt 
+  456  20180308-170025:vim fnr.awk
+  457  20180308-170037:awk -f fnr.awk employee.txt awk-employee.txt 
+  458  20180308-170051:vim fnr.awk
+  459  20180308-170103:awk -f fnr.awk employee.txt awk-employee.txt 
+  460  20180308-170106:vim fnr.awk
+  461  20180308-170123:awk -f fnr.awk employee.txt awk-employee.txt 
+  462  20180308-170139:vim fnr.awk
+  463  20180308-170214:awk -f fnr.awk employee.txt awk-employee.txt 
+  464  20180308-170259:vim fnr.awk
+  465  20180308-170341:awk -f fnr.awk employee.txt awk-employee.txt 
+  466  20180308-170437:awk '{prin $1,$2,$3,$4,"-->",NF}' employee.txt
+  467  20180308-170519:awk '{print $1,$2,$3,$4,"-->",NF}' employee.txt
+  468  20180308-170830:awk -F, '{print $1,$2,$3,$4 "-->",NF}' employee.txt
+  469  20180308-171226:cp employee.txt sal.txt
+  470  20180308-171231:vim sal.txt 
+  471  20180308-171312:vim total-sal.awk
+  472  20180308-171538:awk total-sal.awk sal.txt 
+  473  20180308-171544:vim total-sal.awk
+  474  20180308-171616:awk total-sal.awk sal.txt 
+  475  20180308-171622:vim total-sal.awk
+  476  20180308-171724:awk total-sal.awk sal.txt 
+  477  20180308-171726:vim total-sal.awk
+  478  20180308-171734:awk total-sal.awk sal.txt 
+  479  20180308-171736:vim total-sal.awk
+  480  20180308-172022:awk -f total-sal.awk sal.txt 
+  481  20180308-172047:awk -F , '{print -$4}' employee.txt
+  482  20180308-172101:awk -F , '{print -$4}' sal.txt
+  483  20180308-172225:awk -F, '{print $4--}' sal.txt 
+  484  20180308-172256:awk -F, '{$4--;print $4}' employee.txt
+  485  20180308-172340:awk -F, '{$4--;print $4}' sal.txt.txt
+  486  20180308-172345:awk -F, '{$4--;print $4}' sal.txt
+  487  20180308-174152:history 
+  488  20180308-174316:ping www.baidu.coom 
+  489  20180308-174318:ping www.baidu.com
+  490  20180308-174742:ssh-keygen -t rsa -C "1255560195@qq.com"
+  491  20180308-174804:cd .ssh/
+  492  20180308-174814:ll 
+  493  20180308-174830:vim id_rsa.pub 
+  494  20180308-175141:ssh -T git@github.com
+  495  20180308-175214:cd
+  496  20180308-175319:git config --global xueji "xueji"
+  497  20180308-175328:yum install -y git
+  498  20180308-175358:git config --global xueji "xueji"
+  499  20180308-175606:ls 
+  500  20180308-175626:history > history.txt

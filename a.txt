@@ -1,0 +1,17 @@
+● network.service - LSB: Bring up/down networking
+   Loaded: loaded (/etc/rc.d/init.d/network; bad; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Tue 2018-03-06 19:03:06 CST; 32s ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 3293 ExecStop=/etc/rc.d/init.d/network stop (code=exited, status=0/SUCCESS)
+  Process: 6540 ExecStart=/etc/rc.d/init.d/network start (code=exited, status=1/FAILURE)
+
+Mar 06 19:03:06 master.xueji.cn network[6540]: RTNETLINK answers: File exists
+Mar 06 19:03:06 master.xueji.cn network[6540]: RTNETLINK answers: File exists
+Mar 06 19:03:06 master.xueji.cn network[6540]: RTNETLINK answers: File exists
+Mar 06 19:03:06 master.xueji.cn network[6540]: RTNETLINK answers: File exists
+Mar 06 19:03:06 master.xueji.cn network[6540]: RTNETLINK answers: File exists
+Mar 06 19:03:06 master.xueji.cn network[6540]: RTNETLINK answers: File exists
+Mar 06 19:03:06 master.xueji.cn systemd[1]: network.service: control process exited, code=exited status=1
+Mar 06 19:03:06 master.xueji.cn systemd[1]: Failed to start LSB: Bring up/down networking.
+Mar 06 19:03:06 master.xueji.cn systemd[1]: Unit network.service entered failed state.
+Mar 06 19:03:06 master.xueji.cn systemd[1]: network.service failed.
